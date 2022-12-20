@@ -6,18 +6,14 @@
 library(Synth)
 
 # Import data set
-df_final <- read.csv("~/Downloads/df_final.csv")
+df3 <- read.csv("~/Downloads/df3.csv")
 
 dataprep.out <-
   dataprep(
-    foo = df_final
-    ,predictors= c("Consumption...per.GDP",
-                   "Investment...per.GDP",
-                   "Net.exports...per.GDP",
-                   "Labour.productivity.growth",
-                   "Unemployment.rate")
+    foo = df3
+    ,predictors= NULL
     ,predictors.op = c("mean")
-    ,dependent     = c("Gross.domestic.product..volume..market.prices")
+    ,dependent     = c("Value")
     ,unit.variable = "Countryno"
     ,time.variable = c("Time")
     ,special.predictors = NULL
